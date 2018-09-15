@@ -1,0 +1,12 @@
+.home_page_photo{
+    width: 220px;
+    height: 140px !important;
+    
+}
+
+/*Pagination*/
+.pager .active a{
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
