@@ -22,6 +22,9 @@ if(isset($_POST['submit'])){
     $body = "";
 }
 $comments = Comment::find_the_comments($photo->id);
+
+
+$user = User::find_by_id($session->user_id);
 ?>
 
         <div class="row">
@@ -36,7 +39,7 @@ $comments = Comment::find_the_comments($photo->id);
 
                 <!-- Author -->
                 <p class="lead">
-                    by <a href="#">Superman</a>
+                    by <a href="#"><?php echo $user->username ?></a>
                 </p>
 
                 <hr>

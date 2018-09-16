@@ -5,6 +5,7 @@
     if(isset($_POST['submit'])){
         $photo = new Photo();
         $photo->title = $_POST['title'];
+        $photo->user_id = $session->user_id;
         $photo->set_file($_FILES['file_upload']);
         
         if($photo->save()){
