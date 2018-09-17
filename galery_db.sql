@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 17, 2018 at 10:56 AM
+-- Generation Time: Sep 17, 2018 at 02:38 PM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -118,7 +118,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `firstname`, `lastname`, `user_image`) VALUES
-(1, 'Superman', '123', 'Mihajlo', 'Petrovic', 'luna_djogani_decko_show_clip_1000x0.jpg');
+(1, 'Superman', '123', 'Mihajlo', 'Petrovic', 'luna_djogani_decko_show_clip_1000x0.jpg'),
+(22, 'Batman', '123', 'Bruce', 'Wayne', '200px-Batman-BenAffleck.jpg');
 
 --
 -- Indexes for dumped tables
@@ -163,7 +164,7 @@ ALTER TABLE `photos`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
