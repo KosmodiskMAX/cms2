@@ -1,7 +1,7 @@
 <?php
 
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
-define('SITE_ROOT', DS . 'xampp' . DS . 'htdocs' . DS . 'Demo' . DS . 'oop');
+define('SITE_ROOT', DS . 'xampp' . DS . 'htdocs' . DS . 'Demo' . DS. 'cms' . DS . 'oop');
 defined('INCLUDES_PATH') ? null : define('INCLUDES_PATH', SITE_ROOT.DS.'admin'.DS);
 
 

@@ -52,12 +52,15 @@
 
 
         <div class="form-group">
-        <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+        <input type="submit" name="submit" value="Login" class="btn btn-primary btn-block">
 
         </div>
-
-
     </form>
+        <div class="">
+        <a href="register.php">
+            <button name="register" value="Register" class="btn btn-primary btn-block">Register</button>
+        </a>
+        </div>
 
 
 </div>

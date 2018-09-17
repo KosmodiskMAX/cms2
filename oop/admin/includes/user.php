@@ -35,6 +35,9 @@
         public function delete_user(){
         if($this->delete()){
             $target_path = $this->upload_directory.DS.$this->user_image;
+            if($this->id == $session->user_id){
+                $session->logout();
+            }
             return unlink($target_path) ? true : false;
             }else{
                 return false;

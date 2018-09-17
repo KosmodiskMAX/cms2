@@ -2,7 +2,7 @@
 <?php require_once("init.php"); ?>
 
 <?php
-    if(basename($_SERVER['PHP_SELF'])!="login.php" && !$session->is_signed_in()){
+    if(basename($_SERVER['PHP_SELF'])!="login.php" && basename($_SERVER['PHP_SELF'])!="register.php" && !$session->is_signed_in()){
        redirect("login.php");
     }
 ?>
