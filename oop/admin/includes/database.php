@@ -14,7 +14,7 @@ class Database {
         $this->connection = new mysqli(DB_HOST,DB_USER,DB_PASS,DB_NAME);
             
         if($this->connection->connect_errno){
-            die("Database connection failed badly". $this->conection->connect_error);
+            die("Database connection failed badly". $this->connection->connect_error);
         }
         
     }
@@ -27,7 +27,7 @@ class Database {
     
     private function confirm_query($result){
         if(!$result){
-            die("Query FAILED" . $this->connection->connect_error);
+            die("Query FAILED" . $this->connection->error);
         }
     }
     
