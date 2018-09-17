@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2018 at 11:41 AM
+-- Generation Time: Sep 17, 2018 at 10:56 AM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -40,9 +40,11 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id`, `photo_id`, `user_id`, `body`) VALUES
-(7, 16, 1, 'Da li je ovo realno'),
-(9, 16, 1, 'Hoce kobas'),
-(10, 16, 1, 'Idi nahui');
+(11, 16, 1, 'Test komentar'),
+(12, 16, 1, 'Mnogo dobar komentar'),
+(13, 16, 1, 'Lorem ipsum'),
+(14, 27, 1, 'Njanjanja'),
+(15, 43, 1, 'tralala');
 
 -- --------------------------------------------------------
 
@@ -67,7 +69,7 @@ CREATE TABLE `photos` (
 --
 
 INSERT INTO `photos` (`id`, `user_id`, `title`, `caption`, `description`, `filename`, `alternate_text`, `type`, `size`) VALUES
-(16, 1, 'Batmobile', 'Brzina', '<p><i><strong>Mnogo brz auto, lorem ipsum hoce kobas max, prosto ne bi verovali</strong></i></p>', 'images-7.jpg', '', 'image/jpeg', 24140),
+(16, 1, 'Batmobile', 'Brzina', '<p><i><strong>Mnogo brz auto, lorem ipsum, prosto ne bi verovali koliko je dobar</strong></i></p>', 'images-7.jpg', '', 'image/jpeg', 24140),
 (17, 1, 'Auto3', '', '', '_large_image_4.jpg', '', 'image/jpeg', 554659),
 (18, 1, 'Kobas2', '', '', '_large_image_2.jpg', '', 'image/jpeg', 309568),
 (19, 1, 'Nova slika', '', '', 'images-4.jpg', '', 'image/jpeg', 23270),
@@ -116,13 +118,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `firstname`, `lastname`, `user_image`) VALUES
-(1, 'Superman', '123', 'Mihajlo', 'Petrovic', 'luna_djogani_decko_show_clip_1000x0.jpg'),
-(4, 'KONJ', '', '', '', ''),
-(10, 'KONJ33', '123', 'Lazar', 'Casio', ''),
-(11, 'KONJ', '123', '', '', ''),
-(12, 'KONJMAX', '', '', '', ''),
-(14, 'KONJ2', '123', 'Lazar', 'Casio', ''),
-(20, 'Vitez Koja14', '', 'Mihajlo', 'Zlatic', 'images-37.jpg');
+(1, 'Superman', '123', 'Mihajlo', 'Petrovic', 'luna_djogani_decko_show_clip_1000x0.jpg');
 
 --
 -- Indexes for dumped tables
@@ -155,7 +151,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `photos`
