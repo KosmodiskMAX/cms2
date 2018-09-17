@@ -1,5 +1,12 @@
 <?php require_once("admin/includes/init.php") ?>
 
+<?php
+    if(basename($_SERVER['PHP_SELF'])!="login.php" && !$session->is_signed_in()){
+       redirect("admin/login.php");
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
