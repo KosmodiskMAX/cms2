@@ -3,7 +3,7 @@
 <?php
     $message = "";
     if(isset($_GET['id'])){
-        $user = User::find_by_id($_GET['id']);    
+        $user = User::find_by_id($_GET['id']);
     }else{
         redirect("users.php");
     }
@@ -30,7 +30,9 @@
 
 
 ?>
-        
+<!--modal-->
+
+ <?php include("includes/modal.php"); ?>       
 
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -66,8 +68,10 @@
                             USERS <?php echo $message; ?>
                             <small>Subheading</small>
                         </h1>
-                        <div class="col-md-6">
+                        <div class="col-md-6 user-image-box">
+                            <a href="#" data-toggle="modal" data-target="#photo-library">
                             <img class="img-responsive" src="<?php echo $user->image_path_and_placeholder()?>" alt="">
+                            </a>
                         </div>
                     <form action="" method=post enctype="multipart/form-data">
                            
@@ -92,7 +96,7 @@
                                 <input type="password" name="password" class="form-control" value=""> 
                             </div>
                             <div class="form-group">
-                                <a href="delete_user.php?id=<?php echo $user->id?>" class="btn btn-danger">Delete</a>
+                                <a href="delete_user.php?id=<?php echo $user->id?>" id="user-id" class="btn btn-danger">Delete</a>
                                 <input type="submit" name="update" class="btn btn-primary pull-right" value="UPDATE"> 
                             </div>
                         </div>
